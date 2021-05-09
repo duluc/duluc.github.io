@@ -66,5 +66,5 @@ function butOkEchCallback() {
 
 butOkComp.addEventListener("click", butOkCompCallback)
 butOkEch.addEventListener("click", butOkEchCallback)
-document.getElementById("OkFini").addEventListener("click",initialize)
+document.getElementById("OkFini").addEventListener("click",function(){initialize();document.getElementById('id01').style.display='None'})
 initialize()

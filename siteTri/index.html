@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Tri</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+</head>
+
+<body class="w3-theme-d3">
+    <header class="w3-center w3-theme-l1">
+        <h1>Le Tri: Des comparaisons et des échanges</h1>
+    </header>
+    <div class="w3-row" >
+        <div class="w3-container w3-theme w3-card w3-col  w3-margin" style="width: 40%;">
+
+            <div class="w3-card w3-theme-l5  w3-margin" id="comparaison">
+                <div class="w3-text-theme  w3-padding">
+                    <p>Donnez les indices des éléments que vous voulez comparer.</p>
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>index i </label>
+                            <input class="w3-input w3-border w3-text-theme " type="text" id="premierIndexComp">
+                        </div>
+                        <div class="w3-half">
+                            <label>index j </label>
+                            <input class="w3-input w3-border w3-text-theme " type="text" id="secondIndexComp">
+                        </div>
+                    </div>
+                    <div class="w3-center w3-margin">
+                        <button class="w3-button w3-theme-l1 " id="OkComp">Comparer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-card w3-theme-l3 w3-margin w3-padding" id="compRes" style="height: 80px;">
+
+
+            </div>
+        </div>
+
+        <div class="w3-container w3-theme w3-card w3-col  w3-margin" style="width: 40%;">
+
+            <div class="w3-card w3-theme-l5  w3-margin" id="echange">
+                <div class="w3-text-theme  w3-padding">
+                    <p>Donnez les indices des éléments que vous voulez échanger.</p>
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>index i </label>
+                            <input class="w3-input w3-border w3-text-theme " type="text" id="premierIndexEch">
+                        </div>
+                        <div class="w3-half">
+                            <label>index j </label>
+                            <input class="w3-input w3-border w3-text-theme " type="text" id="secondIndexEch">
+                        </div>
+                    </div>
+                    <div class="w3-center w3-margin">
+                        <button class="w3-button w3-theme-l1 " id="OkEch">Echanger</button>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-card w3-theme-l3 w3-margin w3-padding" id="echRes" style="height: 80px;">
+            </div>
+        </div>
+    
+
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+              <div class="w3-container">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+                <p class="w3-text-theme" id="fini"></p>
+                <div class="w3-center w3-margin">
+                    <button class="w3-button w3-theme-l1 " id="OkFini">Recommencer</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>

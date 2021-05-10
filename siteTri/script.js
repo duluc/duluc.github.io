@@ -12,7 +12,7 @@ let butOkComp = document.getElementById("OkComp"),
     inputSecondIndexEch = document.getElementById("secondIndexEch"),
     divResEch = document.getElementById("echRes"),
     butOkFini=document.getElementById("OkFini"),
-    intro=document.getElementById("introducion");
+    intro=document.getElementById("introduction");
 
 
 

@@ -14,8 +14,6 @@ let butOkComp = document.getElementById("OkComp"),
     butOkFini = document.getElementById("OkFini"),
     intro = document.getElementById("introduction");
 
-
-
 function initialize() {
     for (let i = 0; i < taille; i = i + 1) {
         listeATrier[i] = Math.floor(Math.random() * valMax)
@@ -23,7 +21,6 @@ function initialize() {
     nbEch = 0
     nbComp = 0
     intro.innerHTML = "<p>L est un tableau de " + taille + " nombre entiers (les indices vont de 0 à " + (taille - 1) + " ). Le but de cette activité est de le trier en ordre croissant en faisant le moins de comparaisons et d'échanges possibles.</p>"
-
 }
 
 function estTrié(uneListe) {
@@ -48,7 +45,7 @@ function comparer(uneListe, i, j) {
 }
 
 function estIndice(nb) {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < taille; i++) {
         if (nb == i) {
             return true
         }
@@ -68,24 +65,31 @@ function butOkCompCallback() {
         divResComp.innerHTML += "Vous avez fait " + nbComp + " comparaisons."
     }
     else {
-        divResComp.innerHTML=" Entrez des nombres entiers entre 0 et "+(taille-1)+"."
+        divResComp.innerHTML = " Entrez des nombres entiers entre 0 et " + (taille - 1) + "."
     }
 }
 
 function butOkEchCallback() {
-    echange(listeATrier, Number(inputPremierIndexEch.value), Number(inputSecondIndexEch.value))
-    divResEch.innerHTML = "Echange éffectué<br>Vous avez fait " + nbEch + " échanges."
-    if (estTrié(listeATrier)) {
-        document.getElementById("fini").innerHTML += "\n Bravo, vous avez trié la liste en " + nbEch + " échanges et " + nbComp + " comparaisons."
-        document.getElementById('id01').style.display = 'block'
+    if (estIndice(Number(inputPremierIndexEch.value) && estIndice(Number(inputSecondIndexEch.value)))) {
+        echange(listeATrier, Number(inputPremierIndexEch.value), Number(inputSecondIndexEch.value))
+        divResEch.innerHTML = "Echange éffectué<br>Vous avez fait " + nbEch + " échanges."
+        if (estTrié(listeATrier)) {
+            document.getElementById("fini").innerHTML += "\n Bravo, vous avez trié la liste en " + nbEch + " échanges et " + nbComp + " comparaisons."
+            document.getElementById('id01').style.display = 'block'
+        } else {
+            divResEch.innerHTML += " La liste n'est pas encore triée."
+
+        }
     } else {
-        divResEch.innerHTML += " La liste n'est pas encore triée."
+        divResEch.innerHTML = " Entrez des nombres entiers entre 0 et " + (taille - 1) + "."
     }
 }
 
 function butOkFiniCallback() {
     initialize();
     document.getElementById('id01').style.display = 'None'
+    divResComp.innerHTML = ""
+    divResEch.innerHTML = ""
 }
 
 butOkComp.addEventListener("click", butOkCompCallback)

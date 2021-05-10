@@ -11,8 +11,8 @@ let butOkComp = document.getElementById("OkComp"),
     inputPremierIndexEch = document.getElementById("premierIndexEch"),
     inputSecondIndexEch = document.getElementById("secondIndexEch"),
     divResEch = document.getElementById("echRes"),
-    butOkFini=document.getElementById("OkFini"),
-    intro=document.getElementById("introduction");
+    butOkFini = document.getElementById("OkFini"),
+    intro = document.getElementById("introduction");
 
 
 
@@ -22,7 +22,7 @@ function initialize() {
     }
     nbEch = 0
     nbComp = 0
-    intro.innerHTML="L est un tableau de "+taille+" nombre entiers. Le but de cette activité est de le trier en ordre croissant en faisant le moins d'échanges possibles."
+    intro.innerHTML = "<p>L est un tableau de " + taille + " nombre entiers (les indices vont de 0 à " + (taille - 1) + " ). Le but de cette activité est de le trier en ordre croissant en faisant le moins d'échanges possibles.</p>"
 
 }
 
@@ -63,18 +63,18 @@ function butOkEchCallback() {
     divResEch.innerHTML = "Echange éffectué<br>Vous avez fait " + nbEch + " échanges."
     if (estTrié(listeATrier)) {
         document.getElementById("fini").innerHTML += "\n Bravo, vous avez trié la liste en " + nbEch + " échanges et " + nbComp + " comparaisons."
-        document.getElementById('id01').style.display='block'
+        document.getElementById('id01').style.display = 'block'
     } else {
         divResEch.innerHTML += " La liste n'est pas encore triée."
     }
 }
 
-function butOkFiniCallback(){
+function butOkFiniCallback() {
     initialize();
-    document.getElementById('id01').style.display='None'
+    document.getElementById('id01').style.display = 'None'
 }
 
 butOkComp.addEventListener("click", butOkCompCallback)
 butOkEch.addEventListener("click", butOkEchCallback)
-butOkFini.addEventListener("click",butOkFiniCallback)
+butOkFini.addEventListener("click", butOkFiniCallback)
 initialize()

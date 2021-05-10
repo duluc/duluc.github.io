@@ -10,7 +10,10 @@ let butOkComp = document.getElementById("OkComp"),
     butOkEch = document.getElementById("OkEch"),
     inputPremierIndexEch = document.getElementById("premierIndexEch"),
     inputSecondIndexEch = document.getElementById("secondIndexEch"),
-    divResEch = document.getElementById("echRes");
+    divResEch = document.getElementById("echRes"),
+    butOkFini=document.getElementById("OkFini"),
+    intro=document.getElementById("introducion");
+
 
 
 function initialize() {
@@ -19,6 +22,8 @@ function initialize() {
     }
     nbEch = 0
     nbComp = 0
+    intro.innerHTML=`<p> L est un tableau de ${taille} nombre entiers. Le but de cette activité est de le trier en ordre croissant en faisant le moins d'échanges possibles. </p>"
+
 }
 
 function estTrié(uneListe) {
@@ -64,7 +69,12 @@ function butOkEchCallback() {
     }
 }
 
+function butOkFiniCallback(){
+    initialize();
+    document.getElementById('id01').style.display='None'
+}
+
 butOkComp.addEventListener("click", butOkCompCallback)
 butOkEch.addEventListener("click", butOkEchCallback)
-document.getElementById("OkFini").addEventListener("click",function(){initialize();document.getElementById('id01').style.display='None'})
+butOkFini.addEventListener("click",butOkFiniCallback)
 initialize()

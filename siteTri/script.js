@@ -47,15 +47,29 @@ function comparer(uneListe, i, j) {
     return uneListe[i] <= uneListe[j]
 }
 
+function estIndice(nb) {
+    for (let i = 0; i < 5; i++) {
+        if (nb == i) {
+            return true
+        }
+    }
+    return false
+}
+
 function butOkCompCallback() {
-    if (comparer(listeATrier, Number(inputPremierIndexComp.value), Number(inputSecondIndexComp.value))) {
-        divResComp.innerHTML = " L[" + inputPremierIndexComp.value + "] <= L[" + inputSecondIndexComp.value + "]"
+    if (estIndice(Number(inputPremierIndexComp.value) && estIndice(Number(inputSecondIndexComp.value)))) {
+        if (comparer(listeATrier, Number(inputPremierIndexComp.value), Number(inputSecondIndexComp.value))) {
+            divResComp.innerHTML = " L[" + inputPremierIndexComp.value + "] <= L[" + inputSecondIndexComp.value + "]"
+        }
+        else {
+            divResComp.innerHTML = " L[" + inputPremierIndexComp.value + "] > L[" + inputSecondIndexComp.value + "]"
+        }
+        divResComp.innerHTML += "<br>"
+        divResComp.innerHTML += "Vous avez fait " + nbComp + " comparaisons."
     }
     else {
-        divResComp.innerHTML = " L[" + inputPremierIndexComp.value + "] > L[" + inputSecondIndexComp.value + "]"
+        divResComp.innerHTML=" Entrez des nombres entiers entre 0 et "+(taille-1)+"."
     }
-    divResComp.innerHTML += "<br>"
-    divResComp.innerHTML += "Vous avez fait " + nbComp + " comparaisons."
 }
 
 function butOkEchCallback() {

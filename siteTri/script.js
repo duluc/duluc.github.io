@@ -22,7 +22,7 @@ function initialize() {
     }
     nbEch = 0
     nbComp = 0
-    intro.innerHTML="<p> L est un tableau de ${taille} nombre entiers. Le but de cette activité est de le trier en ordre croissant en faisant le moins d'échanges possibles. </p>"
+    intro.innerHTML="L est un tableau de "+taille+" nombre entiers. Le but de cette activité est de le trier en ordre croissant en faisant le moins d'échanges possibles."
 
 }
 

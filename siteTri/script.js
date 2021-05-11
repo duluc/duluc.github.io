@@ -21,7 +21,7 @@ function initialize() {
     }
     nbEch = 0
     nbComp = 0
-    intro.innerHTML = "<p>L est un tableau de " + taille + " nombre entiers (les indices vont de 0 à " + (taille - 1) + " ). Le but de cette activité est de le trier en ordre croissant en faisant le moins de comparaisons et d'échanges possibles.</p>"
+    intro.innerHTML = "<p>L est un tableau de " + taille + " nombres entiers (les indices vont de 0 à " + (taille - 1) + " ). Le but de cette activité est de le trier en ordre croissant en faisant le moins de comparaisons et d'échanges possibles.</p>"
     historique="<br>L=["+listeATrier+"]<br>"
 }
 

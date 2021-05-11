@@ -39,12 +39,12 @@ function echange(uneListe, i, j) {
     uneListe[i] = uneListe[j]
     uneListe[j] = temp
     nbEch++
-    //historique+="Echange entre L["+i+"]="+L[i]+" et L["+j+"]="+L[j]+"<br> L="+L+"<br>"
+    historique+="Echange entre L["+i+"]="+L[i]+" et L["+j+"]="+L[j]+"<br> L="+L+"<br>"
 }
 
 function comparer(uneListe, i, j) {
     nbComp++
-    historique+=" On compare L["+i+"]="+L[i]+" et L["+j+"]="+L[j]+"<br>"
+    //historique+=" On compare L["+i+"]="+L[i]+" et L["+j+"]="+L[j]+"<br>"
     return uneListe[i] <= uneListe[j]
 }
 

@@ -74,7 +74,7 @@ function butOkEchCallback() {
         echange(listeATrier, Number(inputPremierIndexEch.value), Number(inputSecondIndexEch.value))
         divResEch.innerHTML = "Echange éffectué<br>Vous avez fait " + nbEch + " échanges."
         if (estTrié(listeATrier)) {
-            document.getElementById("fini").innerHTML += "\n Bravo, vous avez trié la liste en " + nbEch + " échanges et " + nbComp + " comparaisons."
+            document.getElementById("fini").innerHTML = "\n Bravo, vous avez trié la liste en " + nbEch + " échanges et " + nbComp + " comparaisons."
             document.getElementById('id01').style.display = 'block'
         } else {
             divResEch.innerHTML += " La liste n'est pas encore triée."

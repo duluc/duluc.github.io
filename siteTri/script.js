@@ -22,7 +22,7 @@ function initialize() {
     nbEch = 0
     nbComp = 0
     intro.innerHTML = "<p>L est un tableau de " + taille + " nombre entiers (les indices vont de 0 à " + (taille - 1) + " ). Le but de cette activité est de le trier en ordre croissant en faisant le moins de comparaisons et d'échanges possibles.</p>"
-    historique="L="+L+"<br>"
+    historique="L="+listeATrier+"<br>"
 }
 
 function estTrié(uneListe) {
@@ -39,12 +39,12 @@ function echange(uneListe, i, j) {
     uneListe[i] = uneListe[j]
     uneListe[j] = temp
     nbEch++
-    historique+="Echange entre L["+i+"]="+L[i]+" et L["+j+"]="+L[j]+"<br> L="+L+"<br>"
+    historique+="Echange entre L["+i+"]="+listeATrier[i]+" et L["+j+"]="+listeATrier[j]+"<br> L="+listeATrier+"<br>"
 }
 
 function comparer(uneListe, i, j) {
     nbComp++
-    //historique+=" On compare L["+i+"]="+L[i]+" et L["+j+"]="+L[j]+"<br>"
+    historique+=" On compare L["+i+"]="+listeATrier[i]+" et L["+j+"]="+listeATrier[j]+"<br>"
     return uneListe[i] <= uneListe[j]
 }
 

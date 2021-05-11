@@ -44,7 +44,7 @@ function echange(uneListe, i, j) {
 
 function comparer(uneListe, i, j) {
     nbComp++
-    historique+=" On compare L["+i+"]="+L[i]+" et L["+j+"]="+L[j]"<br>"
+    historique+=" On compare L["+i+"]="+L[i]+" et L["+j+"]="+L[j]+"<br>"
     return uneListe[i] <= uneListe[j]
 }
 

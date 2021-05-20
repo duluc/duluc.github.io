@@ -58,7 +58,7 @@ function estIndice(nb) {
 }
 
 function butOkCompCallback() {
-    if (estIndice(Number(inputPremierIndexComp.value) && estIndice(Number(inputSecondIndexComp.value)))) {
+    if (estIndice(Number(inputPremierIndexComp.value)) && estIndice(Number(inputSecondIndexComp.value))) {
         if (comparer(listeATrier, Number(inputPremierIndexComp.value), Number(inputSecondIndexComp.value))) {
             divResComp.innerHTML = " L[" + inputPremierIndexComp.value + "] <= L[" + inputSecondIndexComp.value + "]"
         }
@@ -74,7 +74,7 @@ function butOkCompCallback() {
 }
 
 function butOkEchCallback() {
-    if (estIndice(Number(inputPremierIndexEch.value) && estIndice(Number(inputSecondIndexEch.value)))) {
+    if (estIndice(Number(inputPremierIndexEch.value)) && estIndice(Number(inputSecondIndexEch.value))) {
         echange(listeATrier, Number(inputPremierIndexEch.value), Number(inputSecondIndexEch.value))
         divResEch.innerHTML = "Echange éffectué<br>Vous avez fait " + nbEch + " échanges."
         if (estTrié(listeATrier)) {

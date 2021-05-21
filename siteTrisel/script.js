@@ -57,6 +57,29 @@ function estIndice(nb) {
     return false
 }
 
+function triSelectionDeroule(L){
+  let res=[],
+  L_temp=Array.from(L),
+  indMin;
+  for (i=0;i<length(L_temp)-1;i++){
+    indMin=i
+    for (j=i+1;j<length(L_temp);j++){
+      res.append(["Comp",indMin,j])
+      if !(comparer(L_temp,indMin,j){
+        indMin=j
+      }
+    }
+    if (indMin>i){
+      res.append(["Ech",i,indMin])
+      echange(L,i,indMin)
+    }
+    return res
+
+
+  }
+}
+
+
 function butOkCompCallback() {
     if (estIndice(Number(inputPremierIndexComp.value)) && estIndice(Number(inputSecondIndexComp.value))) {
         if (comparer(listeATrier, Number(inputPremierIndexComp.value), Number(inputSecondIndexComp.value))) {

@@ -65,7 +65,7 @@ function triSelectionDeroule(L){
     indMin=i
     for (j=i+1;j<length(L_temp);j++){
       res.append(["Comp",indMin,j])
-      if !(comparer(L_temp,indMin,j){
+      if (!(comparer(L_temp,indMin,j){
         indMin=j
       }
     }
